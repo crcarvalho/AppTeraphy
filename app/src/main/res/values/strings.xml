@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">App Teraphy</string>
+    <string name="botao_login">Login</string>
+    <string name="checkbox_mantenha_me_conectado">Mantenha-me conectado</string>
+    <string name="hint_insira_seu_email">Insira seu e-mail</string>
+    <string name="hint_insira_sua_senha">Insira sua senha</string>
+</resources>
