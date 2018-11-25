@@ -47,6 +47,10 @@ class LoginActivity : AppCompatActivity() {
         }
 
 
+        inputEmailLogin.setText(intent.getStringExtra("email"))
+        inputSenha.setText(intent.getStringExtra("senha"))
+
+
         buttonCadastro.setOnClickListener {
             val intent = Intent(this, CadastroActivity::class.java)
             startActivity(intent)

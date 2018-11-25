@@ -48,29 +48,31 @@
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/inputCPF" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/inputTelefone"
             app:layout_constraintStart_toStartOf="@+id/inputTelefone"
-            app:layout_constraintEnd_toEndOf="@+id/inputTelefone" android:hint="CPF"/>
+            app:layout_constraintEnd_toEndOf="@+id/inputTelefone"
+            android:hint="CPF" android:inputType="number"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/inputRG" android:layout_marginTop="8dp"
+            android:id="@+id/inputSenhaCadastro" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/inputCPF"
-            app:layout_constraintStart_toStartOf="@+id/inputCPF" app:layout_constraintEnd_toEndOf="@+id/inputCPF"
-            android:hint="RG"/>
+            app:layout_constraintStart_toStartOf="@+id/inputCPF"
+            app:layout_constraintEnd_toEndOf="@+id/inputCPF"
+            android:hint="Informe sua senha" android:inputType="textPassword"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
-            android:id="@+id/inputDtNascimento" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/inputRG"
-            app:layout_constraintStart_toStartOf="@+id/inputRG" app:layout_constraintEnd_toEndOf="@+id/inputRG"
+            android:id="@+id/inputDtNascimento"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputSenhaCadastro"
+            app:layout_constraintStart_toStartOf="@+id/inputSenhaCadastro"
+            app:layout_constraintEnd_toEndOf="@+id/inputSenhaCadastro"
             android:hint="Data de nascimento"/>
     <Button
             android:text="CADASTRAR"
@@ -78,9 +80,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/buttonCadastrar" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/inputDtNascimento"
-            app:layout_constraintStart_toStartOf="@+id/inputDtNascimento"
-            app:layout_constraintEnd_toEndOf="@+id/inputDtNascimento"/>
+            app:layout_constraintTop_toBottomOf="@+id/inputSelectTipo"
+            app:layout_constraintStart_toStartOf="@+id/inputSelectTipo"
+            app:layout_constraintEnd_toEndOf="@+id/inputSelectTipo" app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
             android:text="Preencha seus dados cadastrais"
             android:layout_width="0dp"
@@ -88,5 +90,17 @@
             android:id="@+id/textView" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.5"/>
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.5"
+            android:textSize="12sp" android:textStyle="bold"/>
+
+    <Spinner
+            android:padding="@dimen/padding_text_default"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputSelectTipo" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputDtNascimento"
+            app:layout_constraintEnd_toEndOf="@+id/inputDtNascimento"
+            app:layout_constraintStart_toStartOf="@+id/inputDtNascimento"
+            android:entries="@array/tipo_usuario"/>
+
 </android.support.constraint.ConstraintLayout>

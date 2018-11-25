@@ -10,4 +10,7 @@
     <string name="fb_login_protocol_scheme">fb2024219594544487</string>
     <string name="botao_cadastrar">CADASTRO</string>
 
+    <!-- TIPOS DE USUARIO -->
+    <string name="psicologo">Psicólogo(a)</string>
+    <string name="paciente">Paciente</string>
 </resources>
