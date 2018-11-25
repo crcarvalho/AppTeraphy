@@ -53,6 +53,18 @@
             app:layout_constraintTop_toBottomOf="@+id/cbConectado"
             app:layout_constraintStart_toStartOf="@+id/cbConectado"
             app:layout_constraintEnd_toEndOf="@+id/cbConectado"/>
+
+    <Button
+            android:text="@string/botao_cadastrar"
+            style="@style/button_background"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonCadastro"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+            app:layout_constraintStart_toStartOf="@+id/buttonLogin"
+            app:layout_constraintEnd_toEndOf="@+id/buttonLogin" app:layout_constraintHorizontal_bias="0.0"
+    />
     <ImageView
             android:layout_width="@dimen/altura_logo_splash"
             android:layout_height="@dimen/largura_logo_splash"
@@ -66,4 +78,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"/>
+
+
+    <com.facebook.login.widget.LoginButton
+            style="@style/FacebookLoginButton"
+            android:id="@+id/buttonLoginFacebook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCadastro"
+            app:layout_constraintStart_toStartOf="@+id/buttonCadastro"
+            app:layout_constraintEnd_toEndOf="@+id/buttonCadastro" app:layout_constraintHorizontal_bias="0.0"
+    />
 </android.support.constraint.ConstraintLayout>

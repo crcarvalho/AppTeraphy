@@ -82,6 +82,18 @@ class SplashScreen : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
+        val anim = AnimationUtils.loadAnimation(
+            this,
+            R.anim.animacao_splash
+        )
+        anim.reset()
+        //Pegando o nosso objeto criado no layout
+        val iv = findViewById<View>(R.id.splash) as ImageView
+        if (iv != null) {
+            iv!!.clearAnimation()
+            iv!!.startAnimation(anim)
+        }
+
         //Initialize the Handler
         mDelayHandler = Handler()
 

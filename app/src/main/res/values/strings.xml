@@ -4,4 +4,10 @@
     <string name="checkbox_mantenha_me_conectado">Mantenha-me conectado</string>
     <string name="hint_insira_seu_email">Insira seu e-mail</string>
     <string name="hint_insira_sua_senha">Insira sua senha</string>
+
+    <!-- INFORMAÇÕES DE LOGIN COM FACEBOOK -->
+    <string name="facebook_app_id">2024219594544487</string>
+    <string name="fb_login_protocol_scheme">fb2024219594544487</string>
+    <string name="botao_cadastrar">CADASTRO</string>
+
 </resources>
