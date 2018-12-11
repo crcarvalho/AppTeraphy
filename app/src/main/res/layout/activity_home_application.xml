@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".HomeApplication">
 
-    <LinearLayout
+    <android.support.design.widget.TabLayout
+            android:id="@+id/tabs_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical">
+            app:tabMode="fixed" />
 
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Login sucess!"
-                android:layout_gravity="center_horizontal"/>
+    <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tabs_main"/>
 
-        <Button
-                android:id="@+id/btnLogout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_margin="20dp"
-                android:background="#3c66c4"
-                android:textAllCaps="false"
-                android:text="Logout"
-                android:textColor="@android:color/white" />
-    </LinearLayout>
-
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
