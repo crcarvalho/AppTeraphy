@@ -29,5 +29,38 @@
         <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
+    <style name="LinearLayoutItemsHorizontal">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="labelText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margem_texto_top</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">@dimen/padding_texto_top</item>
+        <item name="android:paddingBottom">@dimen/padding_texto_bottom</item>
+    </style>
+
+    <style name="textViewField">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/margem_texto_top</item>
+        <item name="android:layout_marginLeft">@dimen/margem_texto_left</item>
+        <item name="android:paddingTop">@dimen/padding_texto_top</item>
+        <item name="android:paddingBottom">@dimen/padding_texto_bottom</item>
+    </style>
+
     <dimen name="smallTxtSize">16dp</dimen>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

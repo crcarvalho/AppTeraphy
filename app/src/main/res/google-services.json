@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "882834145617",
+    "firebase_url": "https://appteraphy.firebaseio.com",
+    "project_id": "appteraphy",
+    "storage_bucket": "appteraphy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882834145617:android:c5e4bbe0919b94e4",
+        "android_client_info": {
+          "package_name": "com.example.carloscarvalho.appteraphy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882834145617-op58bgstbimisvp00ulto0pf9c4onhh9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.carloscarvalho.appteraphy",
+            "certificate_hash": "31892ec7d17ecd2c9dc66e863cc110ef533d062b"
+          }
+        },
+        {
+          "client_id": "882834145617-ottr9q5o21o3kmuaklgthf1hpik9eqvt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7mAD8laQ31nxO86NGYw7qwuJVVxSv7mI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882834145617-ottr9q5o21o3kmuaklgthf1hpik9eqvt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

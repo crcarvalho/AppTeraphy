@@ -10,4 +10,11 @@
     <dimen name="botao_tamanho_texto">16sp</dimen>
     <dimen name="padding_padrao">16dp</dimen>
     <dimen name="padding_text_default">10dp</dimen>
+    <dimen name="margem_texto_left">8dp</dimen>
+    <dimen name="margem_texto_right">8dp</dimen>
+    <dimen name="margem_texto_top">8dp</dimen>
+    <dimen name="padding_texto_top">8dp</dimen>
+    <dimen name="padding_texto_bottom">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
 </resources>

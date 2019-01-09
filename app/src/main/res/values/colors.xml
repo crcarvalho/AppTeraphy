@@ -9,4 +9,6 @@
     <color name="colorPrimaryText">#212121</color>
     <color name="backgroud_splash">#512DA8</color>
     <color name="backgroud_login">#512DA8</color>
+    <color name="backgroud_item">#000</color>
+
 </resources>
