@@ -1,6 +1,5 @@
 package com.example.carloscarvalho.appteraphy.fragments
 
-import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -15,7 +14,6 @@ import kotlinx.android.synthetic.main.psicologos_fragment.*
 
 class PsicologosFragment : Fragment() {
 
-
     //2
     companion object {
 
@@ -27,18 +25,20 @@ class PsicologosFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         return inflater!!.inflate(R.layout.psicologos_fragment, container, false)
-/*
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
         //dentro do listOF vai o retorno JSON de um array de pokemons ou podemos inserir psicologos na lista
-        rvPsicologos.adapter = ListaAdapterPsicologos(listOf(Usuario("Carlos",
-                "Carvalho","carlos@gmail.com","11972847759",
-                "34265901824", "112233",
-                "07101985", "Psicólogo")), activity.applicationContext, {})
-        rvPsicologos.layoutManager = LinearLayoutManager(this)*/
+        rvPsicologos.adapter = ListaAdapterPsicologos(listOf(Usuario("Daniele",
+            "D'Anunciação","dani@gmail.com","11997976520",
+            "37031836832", "112233",
+            "15101987", "Psicóloga"),
+            Usuario("Paula",
+                "Cerqueira","paula@gmail.com","11999995555",
+                "33366655521", "112233",
+                "18011990", "Psicóloga")), activity!!, {})
+        rvPsicologos.layoutManager = LinearLayoutManager(activity)
     }
-
-    override fun onAttach(context: Context?) {
-        super.onAttach(context)
-
-    }
-
 }

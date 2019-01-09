@@ -17,6 +17,7 @@ class ListaAdapterPsicologos(
         val context: Context,
         val listener: (Usuario) -> Unit):
         RecyclerView.Adapter<ListaAdapterPsicologos.ViewHolder>(){
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context)
                 .inflate(R.layout.psicologo_item, parent, false)
@@ -25,6 +26,10 @@ class ListaAdapterPsicologos(
 
     override fun getItemCount(): Int {
         return psicologos.size
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return R.layout.psicologo_item
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -36,7 +41,17 @@ class ListaAdapterPsicologos(
 
     class ViewHolder( itemView: View): RecyclerView.ViewHolder(itemView){
         fun bindView( psicologo: Usuario, listener: (Usuario) -> Unit) = with(itemView){
+
+            //var nomePsicologo = itemView.findViewById<TextView>(R.id.tvNamePsicologo)
+            //nomePsicologo.text = psicologo.nome + " " + psicologo.sobrenome
+            //cidade.text = psicologo.cidade
             itemView.tvNamePsicologo.text = psicologo.nome + " " + psicologo.sobrenome
+            //itemView.tvCidade.text = psicologo.cidade
+            //itemView.tvEspecialidade.text = psicologo.especialidades
+            itemView.tvEmail.text = psicologo.email
+            itemView.tvCelular.text = psicologo.telefone
+
+            //itemView.tvNa.text = psicologo.nome + " " + psicologo.sobrenome
 
             //Para apresentar foto do psicologo futuramente
             /*Picasso.get()

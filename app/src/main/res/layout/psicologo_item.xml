@@ -1,103 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/tvNamePsicologo"
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:drawableLeft="@drawable/profile_girl"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:text="Daniele DAnunciação"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_height="wrap_content" android:layout_marginTop="8dp">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="4dp">
+        <TextView
+                android:id="@+id/tvNamePsicologo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/profile_girl"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Daniele DAnunciação"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
         />
-<LinearLayout
-    style="@style/LinearLayoutItemsHorizontal">
+        <LinearLayout
+                style="@style/LinearLayoutItemsHorizontal">
 
-    <TextView
-        android:id="@+id/tvLabelCidade"
-        style="@style/labelText"
-        android:text="Cidade:"
-        app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
-        app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo" />
+            <TextView
+                    android:id="@+id/tvLabelCidade"
+                    style="@style/labelText"
+                    android:text="Cidade:"
+                    app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
 
-    <TextView
-        android:id="@+id/tvCidade"
-        style="@style/textViewField"
-        android:text="São Paulo"
-        app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
-        app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo" />
+            <TextView
+                    android:id="@+id/tvCidade"
+                    style="@style/textViewField"
+                    android:text="São Paulo"
+                    app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
 
-</LinearLayout>
+        </LinearLayout>
 
-    <LinearLayout
-        style="@style/LinearLayoutItemsHorizontal">
+        <LinearLayout
+                style="@style/LinearLayoutItemsHorizontal">
 
-        <TextView
-            android:id="@+id/tvLabelEspecialidade"
-            style="@style/labelText"
-            android:text="Especializadades:"
-            app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
-            app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo" />
+            <TextView
+                    android:id="@+id/tvLabelEspecialidade"
+                    style="@style/labelText"
+                    android:text="Especializadades:"
+                    app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
 
-        <TextView
-            android:id="@+id/tvEspecialidade"
-            style="@style/textViewField"
-            android:text="Psicoterapia, Transtorno Compulsivo, Conjugal"
-            app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
-            app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo" />
+            <TextView
+                    android:id="@+id/tvEspecialidade"
+                    style="@style/textViewField"
+                    android:text="Psicoterapia, Transtorno Compulsivo, Conjugal"
+                    app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
 
+        </LinearLayout>
+
+        <LinearLayout
+                style="@style/LinearLayoutItemsHorizontal">
+
+            <TextView
+                    android:id="@+id/tvLabelEmail"
+                    style="@style/labelText"
+                    android:text="E-mail:"
+                    app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
+
+            <TextView
+                    android:id="@+id/tvEmail"
+                    style="@style/textViewField"
+                    android:text="daniele@gmail.com"
+                    app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                style="@style/LinearLayoutItemsHorizontal">
+
+            <TextView
+                    android:id="@+id/tvLabelCelular"
+                    style="@style/labelText"
+                    android:text="Celular:"
+                    app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
+
+            <TextView
+                    android:id="@+id/tvCelular"
+                    style="@style/textViewField"
+                    android:text="011 98855-4433"
+                    app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
+
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        style="@style/LinearLayoutItemsHorizontal">
-
-        <TextView
-            android:id="@+id/tvLabelEmail"
-            style="@style/labelText"
-            android:text="E-mail:"
-            app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
-            app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo" />
-
-        <TextView
-            android:id="@+id/tvEmail"
-            style="@style/textViewField"
-            android:text="daniele@gmail.com"
-            app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
-            app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        style="@style/LinearLayoutItemsHorizontal">
-
-        <TextView
-            android:id="@+id/tvLabelCelular"
-            style="@style/labelText"
-            android:text="Celular:"
-            app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
-            app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo" />
-
-        <TextView
-            android:id="@+id/tvCelular"
-            style="@style/textViewField"
-            android:text="011 98855-4433"
-            app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
-            app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</android.support.v7.widget.CardView>
