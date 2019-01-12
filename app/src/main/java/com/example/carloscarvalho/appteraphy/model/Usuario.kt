@@ -20,7 +20,6 @@ class Usuario{
     var dtNascimento: String? = null
     var tipo: String? = null
 
-    constructor()
 
     constructor(
         nome: String,

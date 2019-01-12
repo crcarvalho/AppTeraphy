@@ -38,7 +38,19 @@ class PsicologosFragment : Fragment() {
             Usuario("Paula",
                 "Cerqueira","paula@gmail.com","11999995555",
                 "33366655521", "112233",
-                "18011990", "Psicóloga")), activity!!, {})
+                "18011990", "Psicóloga"),
+            Usuario("Maria",
+                "Candido","maria@gmail.com","11999995566",
+                "55566688812", "112233",
+                "1812974", "Psicóloga"),
+            Usuario("Gioavana",
+                "Antoneli","giovana@gmail.com","11999995577",
+                "44477788855", "112233",
+                "1011966", "Psicóloga"),
+            Usuario("Mayara",
+                "Vargas","mayara@gmail.com","11999995588",
+                "12365478998", "112233",
+                "01051988", "Psicóloga")), activity!!, {})
         rvPsicologos.layoutManager = LinearLayoutManager(activity)
     }
 }

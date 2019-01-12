@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="4dp">
+        <LinearLayout style="@style/LinearLayoutItemsHorizontal" >
+            <TextView
+                    android:id="@+id/tvLabelEventoNome"
+                    style="@style/labelText"
+                    android:text="Evento:" />
+            <TextView
+                    android:id="@+id/tvEventoNome"
+                    style="@style/textViewField"
+                    android:text="CONGRESSO CRP"/>
+        </LinearLayout>
+
+        <LinearLayout
+                style="@style/LinearLayoutItemsHorizontal">
+            <TextView
+                    android:id="@+id/tvLabelEventoData"
+                    style="@style/labelText"
+                    android:text="Data:" />
+            <TextView
+                    android:id="@+id/tvEventoData"
+                    style="@style/textViewField"
+                    android:text="10/10/2019"  />
+        </LinearLayout>
+
+        <LinearLayout
+                style="@style/LinearLayoutItemsHorizontal">
+            <TextView
+                    android:id="@+id/tvLabelEventoDescricao"
+                    style="@style/labelText"
+                    android:text="Descrição:" />
+            <TextView
+                    android:id="@+id/tvEventoDescricao"
+                    style="@style/textViewField"
+                    android:text="A singularidade humana: um diálogo entre a Psicanálise e fenomenologia"  />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
