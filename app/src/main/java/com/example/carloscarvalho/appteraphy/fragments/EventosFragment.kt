@@ -35,6 +35,6 @@ class EventosFragment : Fragment() {
         rvEventos.adapter = ListaAdapterEventos(listOf(
             Evento("CEP","12/01/2019","A singularidade humana: um diálogo entre a Psicanálise e fenomenologia")
         ), activity!!, {})
-        rvPsicologos.layoutManager = LinearLayoutManager(activity)
+        rvEventos.layoutManager = LinearLayoutManager(activity)
     }
 }

@@ -32,4 +32,7 @@ interface ConsultaDAO{
     @Query("SELECT * FROM Consulta WHERE cpfCliente = :cpfCliente")
     fun buscaPorCPF(cpfCliente: String): LiveData<List<Consulta>>
 
+    @Query("SELECT * FROM Consulta WHERE psicologo like '%'+psicologo+'%'")
+    fun buscaPorNomePsicologo(psicologo: String): LiveData<List<Consulta>>
+
 }

@@ -9,9 +9,28 @@
             android:id="@+id/rvConsultas"
             style="@style/recyclerViewLayout"
             android:layout_margin="0dp"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="1.0"/>
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabAddConsulta"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="bottom|right"
+            android:src="@android:drawable/ic_input_add"
+            android:backgroundTint="@color/colorPrimary"
+            android:tint="@color/cardview_light_background"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.838"/>
+
+
 
 </android.support.constraint.ConstraintLayout>

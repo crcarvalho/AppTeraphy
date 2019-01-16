@@ -12,8 +12,8 @@ class Consulta{
 
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
-    var psicologo: Usuario? = null
-    var paciente: Usuario? = null
+    var psicologo: String? = null
+    var paciente: String? = null
     var cpfCliente: String? = null
     var dataConsulta: String? = null
     var endereco: String? = null
@@ -22,8 +22,8 @@ class Consulta{
 
     constructor(
         id: Int,
-        psicologo: Usuario?,
-        paciente: Usuario?,
+        psicologo: String?,
+        paciente: String?,
         cpfCliente: String,
         dataConsulta: String?,
         endereco: String?
@@ -37,8 +37,8 @@ class Consulta{
     }
 
     constructor(
-        psicologo: Usuario?,
-        paciente: Usuario?,
+        psicologo: String?,
+        paciente: String?,
         cpfCliente: String,
         dataConsulta: String?,
         endereco: String?
@@ -48,6 +48,12 @@ class Consulta{
         this.cpfCliente = cpfCliente
         this.dataConsulta = dataConsulta
         this.endereco = endereco
+    }
+
+    constructor(psicologo: String?, paciente: String?, dataConsulta: String?) {
+        this.psicologo = psicologo
+        this.paciente = paciente
+        this.dataConsulta = dataConsulta
     }
 
 

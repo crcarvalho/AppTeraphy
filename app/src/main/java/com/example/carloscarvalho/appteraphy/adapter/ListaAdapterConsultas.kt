@@ -43,7 +43,7 @@ class ListaAdapterConsultas(
         fun bindView(consulta: Consulta, listener: (Consulta) -> Unit) = with(itemView) {
 
             itemView.tvConsultaData.text = consulta.dataConsulta.toString()
-            var nomeCompleto = consulta.psicologo?.nome + " " + consulta.psicologo?.sobrenome
+            var nomeCompleto = consulta.psicologo
             itemView.tvConsultaPsicologo.text = nomeCompleto
 
             setOnClickListener({ listener(consulta) })
