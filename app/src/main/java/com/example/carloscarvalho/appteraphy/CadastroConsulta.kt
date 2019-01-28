@@ -19,15 +19,27 @@ class CadastroConsulta : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro_consulta)
 
+        //Recupera valores dos campos quando a activity é acionada pelo botão de atualizar
+        val objConsulta = intent.getSerializableExtra("OBJ_CONSULTA")
+
+        //Quando as variaveis estão preenchidas os campos são preenchidos
+        if( objConsulta != null ){
+            consulta = objConsulta as Consulta
+            inputDate.setText(objConsulta.dataConsulta.toString())
+            inputPsicologo.setText(objConsulta.psicologo.toString())
+        }
+
+        //botão de SALVAR dados inseridos na activity
         btSalvarConsulta.setOnClickListener {
             if( inputDate.text != null && !inputDate.text.isBlank() && !inputPsicologo.text.isBlank() && inputPsicologo.text != null){
-                Toast.makeText(this, "Método não concluido!", Toast.LENGTH_LONG ).show()
-                //salvarNoFireBase()
+                //Toast.makeText(this, "Método não concluido!", Toast.LENGTH_LONG ).show()
+                salvarNoFireBase()
             }else{
                 Toast.makeText(this, "Todos os campos são obrigatórios", Toast.LENGTH_LONG ).show()
             }
         }
 
+        //botão de CANCELAR dados inseridos na activity
         btCancelarCadConsulta.setOnClickListener {
             val intent = Intent(this@CadastroConsulta,HomeApplication::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
@@ -37,10 +49,14 @@ class CadastroConsulta : AppCompatActivity() {
     }
 
     private fun salvarNoFireBase(){
-        consulta = Consulta()
 
-        FirebaseDatabase.getInstance().getReference("Usuarios")
-            .child(FirebaseAuth.getInstance().currentUser!!.uid)
+        val idUser = FirebaseAuth.getInstance().currentUser!!.uid
+        val tabela = FirebaseDatabase.getInstance().getReference("Consultas")
+        val id = if ( consulta != null ) consulta?.id.toString() else tabela.push().key.toString()
+        val consulta = Consulta( id, inputPsicologo.value(), idUser, inputDate.value())
+
+        tabela
+            .child(id)
             .setValue(consulta)
             .addOnCompleteListener {
                 if( it.isSuccessful ){
@@ -49,6 +65,11 @@ class CadastroConsulta : AppCompatActivity() {
                     val telaAnterior = Intent()
                     telaAnterior.putExtra("carregarLista", true)
                     setResult(Activity.RESULT_OK, telaAnterior)
+
+                    //Limpa campos
+                    inputPsicologo.setText("")
+                    inputDate.setText("")
+
                     finish()
                 }else{
                     Toast.makeText(this, "Erro ao criar uma consulta", Toast.LENGTH_LONG ).show()

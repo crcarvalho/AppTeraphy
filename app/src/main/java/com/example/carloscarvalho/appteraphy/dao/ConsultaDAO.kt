@@ -3,7 +3,6 @@ package com.example.carloscarvalho.appteraphy.dao
 import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*
 import com.example.carloscarvalho.appteraphy.model.Consulta
-import com.example.carloscarvalho.appteraphy.model.Usuario
 import java.time.format.DateTimeFormatter
 
 
