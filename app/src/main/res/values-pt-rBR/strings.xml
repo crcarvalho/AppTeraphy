@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Teraphy</string>
+    <string name="botao_login">Login</string>
+    <string name="checkbox_mantenha_me_conectado">Mantenha-me conectado</string>
+    <string name="hint_insira_seu_email">Insira seu e-mail</string>
+    <string name="hint_insira_sua_senha">Insira sua senha</string>
+    <string name="facebook_app_id">2024219594544487</string>
+    <string name="fb_login_protocol_scheme">fb2024219594544487</string>
+    <string name="botao_cadastrar">CADASTRO</string>
+    <string name="psicologo">Psicólogo(a)</string>
+    <string name="paciente">Paciente</string>
+    <string name="text_preencher_dados">Preencha seus dados cadastrais</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_sobrenome">Sobrenome</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_telefone">Celular</string>
+    <string name="hint_cpf">CPF</string>
+    <string name="hint_informe_sua_senha">Informe sua senha</string>
+    <string name="hint_data_nascimento">Data de nascimento</string>
+    <string name="button_cadastrar">CADASTRAR</string>
+    <string name="title_activity_psicologo_lista">Lista de Psicólogos</string>
+    <string name="required_fields">Todos os campos são obrigatórios</string>
+    <string name="date_schedule_exame">Consulta agendada na data</string>
+    <string name="with_success">com sucesso!</string>
+    <string name="error_create_exam">Erro ao criar uma consulta</string>
+    <string name="success_delete_exam">Consulta excluída com sucesso!</string>
+    <string name="txt_user">Usuário</string>
+    <string name="success_created">criado com sucesso</string>
+    <string name="error_create_user">Erro ao criar o usuário</string>
+    <string name="psychologist_unisex_therm">Psicólogo(a)</string>
+    <string name="Date">Data</string>
+    <string name="button_save">SALVAR</string>
+    <string name="button_cancel">CANCELAR</string>
+</resources>

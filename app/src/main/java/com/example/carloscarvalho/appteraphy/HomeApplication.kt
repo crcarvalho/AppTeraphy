@@ -54,6 +54,9 @@ class HomeApplication : AppCompatActivity() {
         if (id == R.id.action_logout) {
             logout()
             return true
+        }else if( id == R.id.action_about ){
+            val intent = Intent(this@HomeApplication,SobreActivity::class.java)
+            startActivity(intent)
         }
         return super.onOptionsItemSelected(item)
     }

@@ -35,7 +35,7 @@ class CadastroConsulta : AppCompatActivity() {
                 //Toast.makeText(this, "Método não concluido!", Toast.LENGTH_LONG ).show()
                 salvarNoFireBase()
             }else{
-                Toast.makeText(this, "Todos os campos são obrigatórios", Toast.LENGTH_LONG ).show()
+                Toast.makeText(this, getString(R.string.required_fields), Toast.LENGTH_LONG ).show()
             }
         }
 
@@ -60,7 +60,7 @@ class CadastroConsulta : AppCompatActivity() {
             .setValue(consulta)
             .addOnCompleteListener {
                 if( it.isSuccessful ){
-                    Toast.makeText(this, "Consulta agendada na data "+ inputDate.value() + " com sucesso!", Toast.LENGTH_LONG ).show()
+                    Toast.makeText(this, getString(R.string.date_schedule_exame)+ inputDate.value() + getString(R.string.with_success), Toast.LENGTH_LONG ).show()
 
                     val telaAnterior = Intent()
                     telaAnterior.putExtra("carregarLista", true)
@@ -72,7 +72,7 @@ class CadastroConsulta : AppCompatActivity() {
 
                     finish()
                 }else{
-                    Toast.makeText(this, "Erro ao criar uma consulta", Toast.LENGTH_LONG ).show()
+                    Toast.makeText(this, getString(R.string.error_create_exam), Toast.LENGTH_LONG ).show()
                 }
             }
     }

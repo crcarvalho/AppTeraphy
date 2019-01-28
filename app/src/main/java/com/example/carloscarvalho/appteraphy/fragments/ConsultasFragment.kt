@@ -73,7 +73,7 @@ class ConsultasFragment : Fragment() {
 
                     reference.child(consulta?.id.toString()).removeValue()
 
-                    Toast.makeText(activity,"Consulta excluída com sucesso!",Toast.LENGTH_SHORT ).show()
+                    Toast.makeText(activity,getString(R.string.success_delete_exam),Toast.LENGTH_SHORT ).show()
                 }
 
                 viewHolder!!.itemView.setOnClickListener {

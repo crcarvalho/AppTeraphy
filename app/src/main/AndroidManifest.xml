@@ -43,6 +43,8 @@
                 android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".CadastroConsulta">
         </activity>
+        <activity android:name=".SobreActivity">
+        </activity>
     </application>
 
 </manifest>

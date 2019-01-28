@@ -48,14 +48,14 @@ class CadastroActivity : AppCompatActivity() {
             .setValue(usuario)
             .addOnCompleteListener {
                 if( it.isSuccessful ){
-                    this.showMessage("Usuário "+ inputNome.value() + " criado com sucesso!");
+                    this.showMessage(getString(R.string.txt_user)+ inputNome.value() + getString(R.string.success_created));
                     val telaAnterior = Intent()
                     telaAnterior.putExtra("email", inputEmail.value())
                     telaAnterior.putExtra("senha", inputSenhaCadastro.value())
                     setResult(Activity.RESULT_OK, telaAnterior)
                     finish()
                 }else{
-                    this.showMessage("Erro ao criar o usuário")
+                    this.showMessage(getString(R.string.error_create_user))
                 }
             }
     }

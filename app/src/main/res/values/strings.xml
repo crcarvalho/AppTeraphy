@@ -1,26 +1,40 @@
 <resources>
     <string name="app_name">App Teraphy</string>
     <string name="botao_login">Login</string>
-    <string name="checkbox_mantenha_me_conectado">Mantenha-me conectado</string>
-    <string name="hint_insira_seu_email">Insira seu e-mail</string>
-    <string name="hint_insira_sua_senha">Insira sua senha</string>
 
     <!-- INFORMAÇÕES DE LOGIN COM FACEBOOK -->
     <string name="facebook_app_id">2024219594544487</string>
     <string name="fb_login_protocol_scheme">fb2024219594544487</string>
-    <string name="botao_cadastrar">CADASTRO</string>
 
     <!-- TIPOS DE USUARIO -->
-    <string name="psicologo">Psicólogo(a)</string>
-    <string name="paciente">Paciente</string>
-    <string name="text_preencher_dados">Preencha seus dados cadastrais</string>
-    <string name="hint_nome">Nome</string>
-    <string name="hint_sobrenome">Sobrenome</string>
+    <string name="psicologo">Psycologist</string>
+
+
+    <string name="hint_nome">FirstName</string>
     <string name="hint_email">E-mail</string>
-    <string name="hint_telefone">Telefone</string>
-    <string name="hint_cpf">CPF</string>
-    <string name="hint_informe_sua_senha">Informe sua senha</string>
-    <string name="hint_data_nascimento">Data de nascimento</string>
-    <string name="button_cadastrar">CADASTRAR</string>
-    <string name="title_activity_psicologo_lista">PsicologoLista</string>
+    <string name="hint_telefone">Cellphone</string>
+    <string name="hint_cpf">ID</string>
+    <string name="hint_informe_sua_senha">Input your password</string>
+    <string name="hint_data_nascimento">Date of Birth</string>
+    <string name="button_cadastrar">REGISTER</string>
+    <string name="title_activity_psicologo_lista">List of Psycologists</string>
+    <string name="with_success">with success!</string>
+    <string name="txt_user">User</string>
+    <string name="success_created">"created successfully "</string>
+    <string name="error_create_user">Error creating user</string>
+    <string name="psychologist_unisex_therm">Psycologist</string>
+    <string name="Date">Date</string>
+    <string name="button_save">SAVE</string>
+    <string name="button_cancel">CANCEL</string>
+    <string name="checkbox_mantenha_me_conectado">Stay connected</string>
+    <string name="hint_insira_seu_email">Input your email</string>
+    <string name="hint_insira_sua_senha">Input you password</string>
+    <string name="botao_cadastrar">REGISTER</string>
+    <string name="paciente">Patient</string>
+    <string name="text_preencher_dados">" Fill in your registration information"</string>
+    <string name="hint_sobrenome">LastName</string>
+    <string name="required_fields">All fields are required</string>
+    <string name="date_schedule_exame">Scheduled appointment on date</string>
+    <string name="error_create_exam">" Error creating a exam"</string>
+    <string name="success_delete_exam">" Exam deleted successfully!"</string>
 </resources>
