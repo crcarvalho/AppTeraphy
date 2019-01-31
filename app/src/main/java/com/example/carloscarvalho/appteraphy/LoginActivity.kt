@@ -1,6 +1,7 @@
 package com.example.carloscarvalho.appteraphy
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -30,11 +31,15 @@ class LoginActivity : AppCompatActivity() {
         //Carrega função do botão de login do facebook
         carregarFacebookButton()
 
+        //Recupera o sharedPreferences
+        val sharedPreferences = getSharedPreferences("appteraphy", Context.MODE_PRIVATE);
+
         //Recupera a instancia do firebase
         mAuth = FirebaseAuth.getInstance()
 
         //Verifica se o currentUser é diferente de nulo, caso seja significa que o usuario já logou no app
-        if( mAuth.currentUser != null ){
+        //Se o usuario clicou no checkbox para manter conectado vai para proxima activity
+        if( mAuth.currentUser != null && sharedPreferences.getBoolean("MANTER_CONECTADO", false) ){
             //Direciona o usuario logado para o home da aplicação
             goToHomeApplication()
         }
@@ -48,6 +53,14 @@ class LoginActivity : AppCompatActivity() {
                 inputSenha.value()
             ).addOnCompleteListener {
                 if( it.isSuccessful ){
+                    //Criando uma instancia do sharedpreferences para EDIÇÃO
+                    val editor = sharedPreferences.edit()
+                    editor.putBoolean("MANTER_CONECTADO", cbConectado.isChecked)
+                    editor.putString("USUARIO", inputEmailLogin.text.toString())
+                    //Mais correto utilizar APPLY do que COMMIT pois o APPLY o android identifica o melhor
+                    // momento de comitar sem travar o APP
+                    editor.apply()
+
                     goToHomeApplication()
                 }else{
                     showMessage(it.exception?.message.toString())
@@ -60,6 +73,9 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, CadastroActivity::class.java)
             startActivityForResult(intent, newUserRequestCode)
         }
+
+
+
     }
 
     /*

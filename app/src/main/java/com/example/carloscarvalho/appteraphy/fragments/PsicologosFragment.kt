@@ -9,12 +9,18 @@ import android.view.ViewGroup
 import com.example.carloscarvalho.appteraphy.R
 import com.example.carloscarvalho.appteraphy.adapter.ListaAdapterPsicologos
 import com.example.carloscarvalho.appteraphy.model.Usuario
+import com.firebase.ui.database.FirebaseRecyclerAdapter
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.psicologo_item.view.*
 import kotlinx.android.synthetic.main.psicologos_fragment.*
 
 
 class PsicologosFragment : Fragment() {
 
-    //2
+    lateinit var reference: DatabaseReference
+    lateinit var fireBaseRecyclerView: FirebaseRecyclerAdapter<Usuario, ListaAdapterPsicologos.ViewHolder>
+
     companion object {
 
         fun newInstance(): PsicologosFragment {
@@ -30,27 +36,31 @@ class PsicologosFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        //dentro do listOF vai o retorno JSON de um array de pokemons ou podemos inserir psicologos na lista
-        rvPsicologos.adapter = ListaAdapterPsicologos(listOf(Usuario("Daniele",
-            "D'Anunciação","dani@gmail.com","11997976520",
-            "37031836832", "112233",
-            "15101987", "Psicóloga"),
-            Usuario("Paula",
-                "Cerqueira","paula@gmail.com","11999995555",
-                "33366655521", "112233",
-                "18011990", "Psicóloga"),
-            Usuario("Maria",
-                "Candido","maria@gmail.com","11999995566",
-                "55566688812", "112233",
-                "1812974", "Psicóloga"),
-            Usuario("Gioavana",
-                "Antoneli","giovana@gmail.com","11999995577",
-                "44477788855", "112233",
-                "1011966", "Psicóloga"),
-            Usuario("Mayara",
-                "Vargas","mayara@gmail.com","11999995588",
-                "12365478998", "112233",
-                "01051988", "Psicóloga")), activity!!, {})
+        reference = FirebaseDatabase.getInstance().getReference("Usuarios")
+
+        carregarRecyclerView()
+
+    }
+
+    fun carregarRecyclerView(){
+        fireBaseRecyclerView = object : FirebaseRecyclerAdapter<Usuario, ListaAdapterPsicologos.ViewHolder> (
+            Usuario::class.java,
+            R.layout.psicologo_item,
+            ListaAdapterPsicologos.ViewHolder::class.java,
+            reference
+        ){
+            override fun populateViewHolder(
+                viewHolder: ListaAdapterPsicologos.ViewHolder?,
+                usuario: Usuario?,
+                position: Int
+            ) {
+                viewHolder?.itemView?.tvNamePsicologo?.setText(usuario?.nome +" "+ usuario?.sobrenome)
+                viewHolder?.itemView?.tvEmail?.setText(usuario?.email)
+                viewHolder?.itemView?.tvCelular?.setText(usuario?.telefone)
+            }
+        }
+
+        rvPsicologos.adapter = fireBaseRecyclerView
         rvPsicologos.layoutManager = LinearLayoutManager(activity)
     }
 }

@@ -40,16 +40,16 @@ class ListaAdapterPsicologos(
     }
 
     class ViewHolder( itemView: View): RecyclerView.ViewHolder(itemView){
-        fun bindView( psicologo: Usuario, listener: (Usuario) -> Unit) = with(itemView){
+        fun bindView( usuario: Usuario, listener: (Usuario) -> Unit) = with(itemView){
 
             //var nomePsicologo = itemView.findViewById<TextView>(R.id.tvNamePsicologo)
             //nomePsicologo.text = psicologo.nome + " " + psicologo.sobrenome
             //cidade.text = psicologo.cidade
-            itemView.tvNamePsicologo.text = psicologo.nome + " " + psicologo.sobrenome
+            itemView.tvNamePsicologo.text = usuario.nome + " " + usuario.sobrenome
             //itemView.tvCidade.text = psicologo.cidade
             //itemView.tvEspecialidade.text = psicologo.especialidades
-            itemView.tvEmail.text = psicologo.email
-            itemView.tvCelular.text = psicologo.telefone
+            itemView.tvEmail.text = usuario.email
+            itemView.tvCelular.text = usuario.telefone
 
             //itemView.tvNa.text = psicologo.nome + " " + psicologo.sobrenome
 
@@ -60,7 +60,7 @@ class ListaAdapterPsicologos(
                     .error(R.drawable.notfound)
                     .into(ivPokemon)*/
 
-            setOnClickListener({ listener(psicologo)})
+            setOnClickListener({ listener(usuario)})
         }
     }
 

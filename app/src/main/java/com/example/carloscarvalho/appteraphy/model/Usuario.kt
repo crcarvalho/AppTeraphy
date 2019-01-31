@@ -40,4 +40,6 @@ class Usuario{
         this.dtNascimento = dtNascimento
         this.tipo = tipo
     }
+
+    constructor()
 }

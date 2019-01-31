@@ -14,7 +14,10 @@ class MyPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm)
             0 -> {
                 ConsultasFragment()
             }
-            1 -> PsicologosFragment()
+            1 -> {
+                PsicologosFragment()
+                
+            }
             else -> {
                 return EventosFragment()
             }

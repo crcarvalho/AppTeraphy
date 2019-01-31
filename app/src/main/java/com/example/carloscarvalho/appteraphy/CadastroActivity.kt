@@ -8,7 +8,6 @@ import com.example.carloscarvalho.appteraphy.dao.BancoDeDados
 import com.example.carloscarvalho.appteraphy.extensions.value
 import com.example.carloscarvalho.appteraphy.model.Usuario
 import kotlinx.android.synthetic.main.activity_cadastro.*
-import kotlinx.android.synthetic.main.activity_login.*
 import android.os.AsyncTask
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth

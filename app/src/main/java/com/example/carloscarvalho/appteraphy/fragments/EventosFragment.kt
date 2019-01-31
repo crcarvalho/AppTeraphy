@@ -1,21 +1,28 @@
 package com.example.carloscarvalho.appteraphy.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.carloscarvalho.appteraphy.CadastroEventoActivity
 import com.example.carloscarvalho.appteraphy.R
 import com.example.carloscarvalho.appteraphy.adapter.ListaAdapterEventos
-import com.example.carloscarvalho.appteraphy.adapter.ListaAdapterPsicologos
 import com.example.carloscarvalho.appteraphy.model.Evento
-import com.example.carloscarvalho.appteraphy.model.Usuario
+import com.firebase.ui.database.FirebaseRecyclerAdapter
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.eventos_fragment.*
-import kotlinx.android.synthetic.main.psicologos_fragment.*
+
+import kotlinx.android.synthetic.main.eventos_item.view.*
 
 
 class EventosFragment : Fragment() {
+
+    lateinit var reference: DatabaseReference
+    lateinit var fireBaseRecyclerView: FirebaseRecyclerAdapter<Evento, ListaAdapterEventos.ViewHolder>
 
     companion object {
         fun newInstance(): EventosFragment {
@@ -31,10 +38,37 @@ class EventosFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        //dentro do listOF vai o retorno JSON de um array de pokemons ou podemos inserir psicologos na lista
-        rvEventos.adapter = ListaAdapterEventos(listOf(
-            Evento("CEP","12/01/2019","A singularidade humana: um diálogo entre a Psicanálise e fenomenologia")
-        ), activity!!, {})
+        reference = FirebaseDatabase.getInstance().getReference("Eventos")
+
+        //botao floating para adicionar consulta
+        fabAddEvento.setOnClickListener {
+            val intent = Intent(activity, CadastroEventoActivity::class.java)
+            startActivity(intent)
+        }
+
+        carregarRecyclerView()
+
+    }
+
+    fun carregarRecyclerView(){
+        fireBaseRecyclerView = object : FirebaseRecyclerAdapter<Evento, ListaAdapterEventos.ViewHolder> (
+            Evento::class.java,
+            R.layout.eventos_item,
+            ListaAdapterEventos.ViewHolder::class.java,
+            reference
+        ){
+            override fun populateViewHolder(
+                viewHolder: ListaAdapterEventos.ViewHolder?,
+                evento: Evento?,
+                position: Int
+            ) {
+                viewHolder?.itemView?.tvEventoNome?.setText(evento?.nome.toString())
+                viewHolder?.itemView?.tvEventoData?.setText(evento?.dtEvento.toString())
+                viewHolder?.itemView?.tvEventoDescricao?.setText(evento?.descricao.toString())
+            }
+        }
+
+        rvEventos.adapter = fireBaseRecyclerView
         rvEventos.layoutManager = LinearLayoutManager(activity)
     }
 }
