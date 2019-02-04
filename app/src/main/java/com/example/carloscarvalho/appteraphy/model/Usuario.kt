@@ -2,11 +2,13 @@ package com.example.carloscarvalho.appteraphy.model
 
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
+import com.google.firebase.database.IgnoreExtraProperties
 
 /**
  * Created by Carlos Carvalho on 25/11/2018.
  */
 @Entity
+@IgnoreExtraProperties
 class Usuario{
 
     @PrimaryKey(autoGenerate = true)

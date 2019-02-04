@@ -23,7 +23,7 @@
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:inputType="text"
-                  android:hint="Digite o nome do evento"/>
+                  android:hint="@string/hint_input_event_name"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -44,7 +44,7 @@
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:inputType="datetime"
-                  android:hint="Data do evento"/>
+                  android:hint="@string/hint_input_event_date"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -64,7 +64,7 @@
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:inputType="text"
-                  android:hint="Descrição"/>
+                  android:hint="@string/hint_description"/>
     </android.support.design.widget.TextInputLayout>
 
     <LinearLayout android:layout_width="match_parent"

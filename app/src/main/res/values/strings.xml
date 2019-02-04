@@ -46,4 +46,17 @@
     <string name="hint_city">Input your city</string>
     <string name="hint_state">Input your state</string>
     <string name="update_personal_data">Update Personal Data</string>
+    <string name="error_server_connect">Server not available!</string>
+    <string name="txtCity">City:</string>
+    <string name="txtSkills">Skills:</string>
+    <string name="txtEmail">Email:</string>
+    <string name="txtCelular">Mobile Phone:</string>
+    <string name="txtPsycologist">Psycologist:</string>
+    <string name="txtDate">Date:</string>
+    <string name="txtEvent">Event:</string>
+    <string name="txtDateEvent">Date:</string>
+    <string name="txtDescriptionEvent">Description:</string>
+    <string name="hint_input_event_name">Input event name</string>
+    <string name="hint_input_event_date">Event date</string>
+    <string name="hint_description">Description</string>
 </resources>

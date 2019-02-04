@@ -33,7 +33,7 @@
             <TextView
                     android:id="@+id/tvLabelCidade"
                     style="@style/labelText"
-                    android:text="Cidade:"
+                    android:text="@string/txtCity"
                     app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
                     app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
 
@@ -52,7 +52,7 @@
             <TextView
                     android:id="@+id/tvLabelEspecialidade"
                     style="@style/labelText"
-                    android:text="Especializadades:"
+                    android:text="@string/txtSkills"
                     app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
                     app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
 
@@ -71,7 +71,7 @@
             <TextView
                     android:id="@+id/tvLabelEmail"
                     style="@style/labelText"
-                    android:text="E-mail:"
+                    android:text="@string/txtEmail"
                     app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
                     app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
 
@@ -90,7 +90,7 @@
             <TextView
                     android:id="@+id/tvLabelCelular"
                     style="@style/labelText"
-                    android:text="Celular:"
+                    android:text="@string/txtCelular"
                     app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
                     app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
 
