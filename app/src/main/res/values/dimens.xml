@@ -16,5 +16,15 @@
     <dimen name="padding_texto_top">4dp</dimen>
     <dimen name="padding_texto_bottom">4dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_default">8dp</dimen>
+    <dimen name="margintop_email_address">24dp</dimen>
+    <dimen name="text_size_title">12sp</dimen>
+    <dimen name="text_size_splash_screen">40dp</dimen>
+    <dimen name="padding_reduce">4dp</dimen>
+    <dimen name="margin_bigger">16dp</dimen>
+    <dimen name="button_size_delete_event">32dp</dimen>
+    <dimen name="text_size_devs">24sp</dimen>
+    <dimen name="margin_bottom_rc">30dp</dimen>
+    <dimen name="altura_logo_reduzido">45dp</dimen>
 
 </resources>

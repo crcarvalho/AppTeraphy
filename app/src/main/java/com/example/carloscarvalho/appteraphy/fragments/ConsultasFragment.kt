@@ -3,6 +3,7 @@ package com.example.carloscarvalho.appteraphy.fragments
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.AlertDialog
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import com.example.carloscarvalho.appteraphy.R
 import com.example.carloscarvalho.appteraphy.adapter.ListaAdapterConsultas
 import com.example.carloscarvalho.appteraphy.model.Consulta
 import com.firebase.ui.database.FirebaseRecyclerAdapter
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.consulta_item.view.*
 import kotlinx.android.synthetic.main.consultas_fragment.*
@@ -58,19 +60,18 @@ class ConsultasFragment : Fragment() {
             Consulta::class.java,
             R.layout.consulta_item,
             ListaAdapterConsultas.ViewHolder::class.java,
-            reference // reference.orderByChild("nome")
+            reference.orderByChild("paciente").equalTo(FirebaseAuth.getInstance().currentUser!!.uid)
         ){
             override fun populateViewHolder(
                 viewHolder: ListaAdapterConsultas.ViewHolder?,
                 consulta: Consulta?,
                 position: Int
             ) {
-                viewHolder?.itemView?.etConsultaData?.setText(consulta?.dataConsulta.toString())
+                viewHolder?.itemView?.tvConsultaData?.setText(consulta?.dataConsulta.toString())
                 viewHolder?.itemView?.etConsultaPsicologo?.setText(consulta?.psicologo.toString())
 
                 //Botão excluir da lista de consultas
                 viewHolder!!.itemView.btConsultaItemExcluir.setOnClickListener {
-
                     reference.child(consulta?.id.toString()).removeValue()
 
                     Toast.makeText(activity,getString(R.string.success_delete_exam),Toast.LENGTH_SHORT ).show()

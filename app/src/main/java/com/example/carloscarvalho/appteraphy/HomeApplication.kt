@@ -64,7 +64,7 @@ class HomeApplication : AppCompatActivity() {
     }
 
     override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
-        val menuItem = menu?.findItem(R.id.actionSearch)
+        //val menuItem = menu?.findItem(R.id.actionSearch)
        // val search = menuItem?.actionView as SearchView
         //searching(search)
         return super.onPrepareOptionsMenu(menu)

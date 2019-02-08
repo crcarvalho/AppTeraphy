@@ -44,14 +44,11 @@ class ListaAdapterPsicologos(
 
             //var nomePsicologo = itemView.findViewById<TextView>(R.id.tvNamePsicologo)
             //nomePsicologo.text = psicologo.nome + " " + psicologo.sobrenome
-            //cidade.text = psicologo.cidade
+            itemView.tvCidade.text = usuario.cidade
             itemView.tvNamePsicologo.text = usuario.nome + " " + usuario.sobrenome
-            //itemView.tvCidade.text = psicologo.cidade
-            //itemView.tvEspecialidade.text = psicologo.especialidades
+            itemView.tvEspecialidade.text = usuario.especialidades
             itemView.tvEmail.text = usuario.email
             itemView.tvCelular.text = usuario.telefone
-
-            //itemView.tvNa.text = psicologo.nome + " " + psicologo.sobrenome
 
             //Para apresentar foto do psicologo futuramente
             /*Picasso.get()

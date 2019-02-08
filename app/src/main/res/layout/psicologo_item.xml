@@ -5,22 +5,24 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_height="wrap_content" android:layout_marginTop="8dp">
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        android:visibility="invisible"
+        android:id="@+id/idCardPsicologo"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default">
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:orientation="vertical"
-                  android:padding="4dp">
+                  android:padding="@dimen/padding_reduce">
         <TextView
                 android:id="@+id/tvNamePsicologo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/margin_default"
                 android:drawableLeft="@drawable/profile_girl"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="Daniele DAnunciação"
+                android:paddingTop="@dimen/margin_default"
+                android:paddingBottom="@dimen/margin_default"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +42,6 @@
             <TextView
                     android:id="@+id/tvCidade"
                     style="@style/textViewField"
-                    android:text="São Paulo"
                     app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
                     app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
 
@@ -78,7 +79,6 @@
             <TextView
                     android:id="@+id/tvEmail"
                     style="@style/textViewField"
-                    android:text="daniele@gmail.com"
                     app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
                     app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
 
@@ -97,7 +97,6 @@
             <TextView
                     android:id="@+id/tvCelular"
                     style="@style/textViewField"
-                    android:text="011 98855-4433"
                     app:layout_constraintStart_toStartOf="@+id/tvNamePsicologo"
                     app:layout_constraintTop_toBottomOf="@+id/tvNamePsicologo"/>
 

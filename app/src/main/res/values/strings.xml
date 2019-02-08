@@ -59,4 +59,11 @@
     <string name="hint_input_event_name">Input event name</string>
     <string name="hint_input_event_date">Event date</string>
     <string name="hint_description">Description</string>
+    <string name="dialog_title_confirmation">Confirmation</string>
+    <string name="dialog_message_confirmation_update_info_user">Confirm perfil information update?</string>
+    <string name="dialog_button_ok">OK</string>
+    <string name="hint_skills">Skills</string>
+    <string name="message_success_data_update">Data updated!</string>
+    <string name="message_error_data_not_updated">Error updating data!</string>
+    <string name="message_sccuess_event_deleted">Event deleted successfully!</string>
 </resources>

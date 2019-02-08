@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_cadastro.*
 import kotlinx.android.synthetic.main.activity_cadastro_evento.*
+import kotlinx.android.synthetic.main.eventos_item.*
 
 class CadastroEventoActivity : AppCompatActivity() {
 
@@ -21,7 +22,7 @@ class CadastroEventoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_cadastro_evento)
 
         //Recupera valores dos campos quando a activity é acionada pelo botão de atualizar
-        val objEvento = intent.getSerializableExtra("OBJ_CONSULTA")
+        val objEvento = intent.getSerializableExtra("OBJ_EVENTO")
 
         //Quando as variaveis estão preenchidas os campos são preenchidos
         if (objEvento != null) {
@@ -50,6 +51,8 @@ class CadastroEventoActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+
     }
 
     private fun salvarNoFireBase() {

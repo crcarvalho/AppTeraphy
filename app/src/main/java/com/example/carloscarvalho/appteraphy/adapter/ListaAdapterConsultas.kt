@@ -42,8 +42,8 @@ class ListaAdapterConsultas(
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindView(consulta: Consulta, listener: (Consulta) -> Unit) = with(itemView) {
 
-            itemView.etConsultaData.text = consulta.dataConsulta.toString()
-            itemView.etConsultaData.text = consulta.psicologo.toString()
+            itemView.tvConsultaData.text = consulta.dataConsulta.toString()
+            itemView.tvConsultaData.text = consulta.psicologo.toString()
 
             setOnClickListener({ listener(consulta) })
         }

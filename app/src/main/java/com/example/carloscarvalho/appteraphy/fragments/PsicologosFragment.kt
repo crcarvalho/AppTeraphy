@@ -7,9 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.carloscarvalho.appteraphy.R
+import com.example.carloscarvalho.appteraphy.R.string.psicologo
 import com.example.carloscarvalho.appteraphy.adapter.ListaAdapterPsicologos
 import com.example.carloscarvalho.appteraphy.model.Usuario
 import com.firebase.ui.database.FirebaseRecyclerAdapter
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.psicologo_item.view.*
@@ -43,20 +45,24 @@ class PsicologosFragment : Fragment() {
     }
 
     fun carregarRecyclerView(){
+        val idUser = FirebaseAuth.getInstance().currentUser!!.uid
         fireBaseRecyclerView = object : FirebaseRecyclerAdapter<Usuario, ListaAdapterPsicologos.ViewHolder> (
             Usuario::class.java,
             R.layout.psicologo_item,
             ListaAdapterPsicologos.ViewHolder::class.java,
-            reference
+            reference.orderByChild("tipo").equalTo("Psicólogo(a)")
         ){
             override fun populateViewHolder(
                 viewHolder: ListaAdapterPsicologos.ViewHolder?,
-                usuario: Usuario?,
+                usuario: Usuario,
                 position: Int
             ) {
-                viewHolder?.itemView?.tvNamePsicologo?.setText(usuario?.nome +" "+ usuario?.sobrenome)
-                viewHolder?.itemView?.tvEmail?.setText(usuario?.email)
-                viewHolder?.itemView?.tvCelular?.setText(usuario?.telefone)
+
+                    viewHolder?.itemView?.idCardPsicologo?.setVisibility(View.VISIBLE);
+                    viewHolder?.itemView?.tvNamePsicologo?.setText(usuario?.nome + " " + usuario?.sobrenome)
+                    viewHolder?.itemView?.tvEmail?.setText(usuario?.email)
+                    viewHolder?.itemView?.tvCelular?.setText(usuario?.telefone)
+
             }
         }
 

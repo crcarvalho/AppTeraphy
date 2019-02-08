@@ -21,6 +21,10 @@ class Usuario{
     var senha: String? = null
     var dtNascimento: String? = null
     var tipo: String? = null
+    var cidade: String? = null
+    var endereco: String? = null
+    var estado: String? = null
+    var especialidades: String? = null
 
 
     constructor(
@@ -43,5 +47,29 @@ class Usuario{
         this.tipo = tipo
     }
 
+
+
     constructor()
+
+    constructor(
+        nome: String?,
+        sobrenome: String?,
+        telefone: String?,
+        cpf: String?,
+        dtNascimento: String?,
+        cidade: String?,
+        endereco: String?,
+        estado: String?,
+        especialidades: String?
+    ) {
+        this.nome = nome
+        this.sobrenome = sobrenome
+        this.telefone = telefone
+        this.cpf = cpf
+        this.dtNascimento = dtNascimento
+        this.cidade = cidade
+        this.endereco = endereco
+        this.estado = estado
+        this.especialidades = especialidades
+    }
 }

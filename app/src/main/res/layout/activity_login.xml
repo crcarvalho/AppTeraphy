@@ -12,34 +12,34 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:id="@+id/inputEmailLogin"
-            android:layout_marginTop="24dp"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="8dp"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="@dimen/margintop_email_address"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginRight="@dimen/margin_default"
             android:hint="@string/hint_insira_seu_email"
             android:inputType="textEmailAddress"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:id="@+id/inputSenha"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/margin_default"
+            android:inputType="textPassword"
+            android:hint="@string/hint_insira_sua_senha"
             app:layout_constraintTop_toBottomOf="@+id/inputEmailLogin"
             app:layout_constraintStart_toStartOf="@+id/inputEmailLogin"
-            app:layout_constraintEnd_toEndOf="@+id/inputEmailLogin"
-            android:inputType="textPassword"
-            android:hint="@string/hint_insira_sua_senha"/>
+            app:layout_constraintEnd_toEndOf="@+id/inputEmailLogin"/>
     <CheckBox
             android:text="@string/checkbox_mantenha_me_conectado"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/cbConectado"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/margin_default"
             app:layout_constraintTop_toBottomOf="@+id/inputSenha"
             app:layout_constraintStart_toStartOf="@+id/inputSenha"
             app:layout_constraintEnd_toEndOf="@+id/inputSenha"/>
@@ -49,7 +49,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/buttonLogin"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/margin_default"
             app:layout_constraintTop_toBottomOf="@+id/cbConectado"
             app:layout_constraintStart_toStartOf="@+id/cbConectado"
             app:layout_constraintEnd_toEndOf="@+id/cbConectado"/>
@@ -60,38 +60,39 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/buttonCadastro"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/margin_default"
             app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
             app:layout_constraintStart_toStartOf="@+id/buttonLogin"
-            app:layout_constraintEnd_toEndOf="@+id/buttonLogin" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toEndOf="@+id/buttonLogin"
+            app:layout_constraintHorizontal_bias="0.0"
     />
     <ImageView
             android:layout_width="@dimen/altura_logo_splash"
             android:layout_height="@dimen/largura_logo_splash"
-            app:srcCompat="@drawable/logo"
             android:id="@+id/imageView"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginRight="@dimen/margin_default"
+            app:srcCompat="@drawable/logo"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"/>
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-
-    <com.facebook.login.widget.LoginButton
+    <!--<com.facebook.login.widget.LoginButton
             style="@style/FacebookLoginButton"
             android:padding="@dimen/padding_text_default"
             android:id="@+id/buttonLoginFacebook"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
+            android:layout_marginTop="@dimen/margin_default"
+            android:paddingTop="@dimen/padding_padrao"
+            android:paddingBottom="@dimen/padding_padrao"
             app:layout_constraintTop_toBottomOf="@+id/buttonCadastro"
             app:layout_constraintStart_toStartOf="@+id/buttonCadastro"
-            app:layout_constraintEnd_toEndOf="@+id/buttonCadastro" app:layout_constraintHorizontal_bias="0.0"
-    />
+            app:layout_constraintEnd_toEndOf="@+id/buttonCadastro"
+            app:layout_constraintHorizontal_bias="0.0"
+    />-->
 </android.support.constraint.ConstraintLayout>

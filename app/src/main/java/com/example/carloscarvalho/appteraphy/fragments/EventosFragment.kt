@@ -7,15 +7,17 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.carloscarvalho.appteraphy.CadastroEventoActivity
 import com.example.carloscarvalho.appteraphy.R
 import com.example.carloscarvalho.appteraphy.adapter.ListaAdapterEventos
 import com.example.carloscarvalho.appteraphy.model.Evento
 import com.firebase.ui.database.FirebaseRecyclerAdapter
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.consulta_item.view.*
 import kotlinx.android.synthetic.main.eventos_fragment.*
-
 import kotlinx.android.synthetic.main.eventos_item.view.*
 
 
@@ -47,7 +49,6 @@ class EventosFragment : Fragment() {
         }
 
         carregarRecyclerView()
-
     }
 
     fun carregarRecyclerView(){
@@ -65,6 +66,29 @@ class EventosFragment : Fragment() {
                 viewHolder?.itemView?.tvEventoNome?.setText(evento?.nome.toString())
                 viewHolder?.itemView?.tvEventoData?.setText(evento?.dtEvento.toString())
                 viewHolder?.itemView?.tvEventoDescricao?.setText(evento?.descricao.toString())
+
+
+                if( !evento?.idUser.equals(FirebaseAuth.getInstance().currentUser!!.uid) ) {
+                    //Torna o botão excluir invisivel
+                    viewHolder!!.itemView.btEventoItemExcluir?.visibility = View.INVISIBLE
+                }else{
+                    //Mostra o botão excluir
+                    viewHolder!!.itemView.btEventoItemExcluir?.visibility = View.VISIBLE
+                    //CArrega o item para ser editado
+                    viewHolder!!.itemView.setOnClickListener {
+                        val intent = Intent(viewHolder.itemView.context, CadastroEventoActivity::class.java)
+                        intent.putExtra("OBJ_EVENTO", evento)
+                        viewHolder.itemView.context.startActivity(intent)
+                    }
+                }
+
+                //Botão excluir da lista de evento
+                viewHolder!!.itemView.btEventoItemExcluir.setOnClickListener {
+                    reference.child(evento?.id.toString()).removeValue()
+
+                    Toast.makeText(activity,getString(R.string.message_sccuess_event_deleted), Toast.LENGTH_SHORT ).show()
+                }
+
             }
         }
 

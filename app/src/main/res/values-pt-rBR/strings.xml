@@ -54,4 +54,12 @@
     <string name="hint_input_event_name">Insira o nome do evento</string>
     <string name="hint_input_event_date">Data do evento</string>
     <string name="hint_description">Descrição</string>
+    <string name="dialog_message_confirmation_update_info_user">Deseja confirmar a atualização de dados cadastrais?
+    </string>
+    <string name="dialog_title_confirmation">Confirmação</string>
+    <string name="dialog_button_ok">OK</string>
+    <string name="hint_skills">Especialidades</string>
+    <string name="message_success_data_update">Dados cadastrais atualizados!</string>
+    <string name="message_error_data_not_updated">Erro ao atualizar dados cadastrais!</string>
+    <string name="message_sccuess_event_deleted">Evento excluído com sucesso!</string>
 </resources>

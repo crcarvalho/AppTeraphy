@@ -98,7 +98,7 @@ class LoginActivity : AppCompatActivity() {
      */
 
     private fun carregarFacebookButton(){
-        var buttonLoginFacebook = findViewById<Button>(R.id.buttonLoginFacebook)
+        /*var buttonLoginFacebook = findViewById<Button>(R.id.buttonLoginFacebook)
 
         buttonLoginFacebook.setOnClickListener{
             callbackManager = CallbackManager.Factory.create()
@@ -119,7 +119,7 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }
             )
-        }
+        }*/
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {

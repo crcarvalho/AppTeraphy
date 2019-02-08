@@ -23,7 +23,7 @@
             android:backgroundTint="@color/colorPrimary"
             android:tint="@color/cardview_light_background"
             android:clickable="true"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/margin_default"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"

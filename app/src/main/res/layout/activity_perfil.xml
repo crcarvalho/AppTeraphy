@@ -129,13 +129,28 @@
                 app:layout_constraintEnd_toEndOf="@+id/inputCidade"
         />
 
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/inputEspecialidades"
+                android:layout_marginTop="8dp"
+                android:hint="@string/hint_skills"
+                android:inputType="text"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toBottomOf="@+id/inputEstado"
+                app:layout_constraintStart_toStartOf="@+id/inputEstado"
+                app:layout_constraintEnd_toEndOf="@+id/inputEstado"
+        />
         <LinearLayout android:layout_width="380dp"
                       android:layout_height="wrap_content"
                       android:orientation="horizontal"
-                      app:layout_constraintTop_toBottomOf="@+id/inputEstado"
-                      app:layout_constraintStart_toStartOf="@+id/inputEstado"
-                      app:layout_constraintEnd_toEndOf="@+id/inputEstado"
-                      android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+                      app:layout_constraintTop_toBottomOf="@+id/inputEspecialidades"
+                      app:layout_constraintStart_toStartOf="@+id/inputEspecialidades"
+                      app:layout_constraintEnd_toEndOf="@+id/inputEspecialidades"
+                      android:layout_marginLeft="8dp"
+                      android:layout_marginStart="8dp"
+                      android:layout_marginEnd="8dp"
                       android:layout_marginRight="8dp">
 
             <Button
@@ -145,7 +160,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/btUpdate"
-                    android:layout_margin="8dp"
+                    android:layout_margin="@dimen/margin_default"
                     app:layout_constraintHorizontal_bias="1.0"
             />
             <Button
@@ -155,7 +170,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/btCancel"
-                    android:layout_margin="8dp"
+                    android:layout_margin="@dimen/margin_default"
                     app:layout_constraintHorizontal_bias="1.0"
             />
         </LinearLayout>
@@ -165,17 +180,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginLeft="@dimen/margin_default"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:layout_marginRight="@dimen/margin_default"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:textSize="12sp"
-                android:textStyle="bold"/>
+                app:layout_constraintHorizontal_bias="0.5"/>
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
