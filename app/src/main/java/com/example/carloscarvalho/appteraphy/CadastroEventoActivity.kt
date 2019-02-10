@@ -9,9 +9,7 @@ import com.example.carloscarvalho.appteraphy.extensions.value
 import com.example.carloscarvalho.appteraphy.model.Evento
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_cadastro.*
 import kotlinx.android.synthetic.main.activity_cadastro_evento.*
-import kotlinx.android.synthetic.main.eventos_item.*
 
 class CadastroEventoActivity : AppCompatActivity() {
 

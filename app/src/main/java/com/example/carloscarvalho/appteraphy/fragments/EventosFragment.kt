@@ -71,6 +71,11 @@ class EventosFragment : Fragment() {
                 if( !evento?.idUser.equals(FirebaseAuth.getInstance().currentUser!!.uid) ) {
                     //Torna o botão excluir invisivel
                     viewHolder!!.itemView.btEventoItemExcluir?.visibility = View.INVISIBLE
+
+                    //Carrega o item para ser editado
+                    viewHolder!!.itemView.setOnClickListener {
+                        Toast.makeText(activity,getString(R.string.message_error_for_edit_event), Toast.LENGTH_SHORT ).show()
+                    }
                 }else{
                     //Mostra o botão excluir
                     viewHolder!!.itemView.btEventoItemExcluir?.visibility = View.VISIBLE

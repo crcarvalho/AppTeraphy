@@ -33,7 +33,7 @@
     </LinearLayout>
 
     <TextView
-            android:text="Produto desenvolvido por App Teraphy Ltda"
+            android:text="@string/text_development_by"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvSobreAutor"
@@ -63,7 +63,7 @@
 
 
     <TextView
-            android:text="Desenvolvedores"
+            android:text="@string/text_developers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_reduce"
@@ -78,7 +78,7 @@
             app:layout_constraintStart_toStartOf="@+id/tvSobreVersao"
             app:layout_constraintEnd_toEndOf="@+id/tvSobreVersao" app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
-            android:text="CARLOS ROBERTO DE CARVALHO JUNIOR \n RM330658"
+            android:text="@string/txt_dev_carlos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_padrao"
@@ -92,7 +92,7 @@
             app:layout_constraintStart_toStartOf="@+id/tvDevs"
             app:layout_constraintEnd_toEndOf="@+id/tvDevs" />
     <TextView
-        android:text="DANILLO RAMOS DE CARVALHO BEZERRA \n RM331866"
+        android:text="@string/txt_dev_danillo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/padding_padrao"
@@ -106,7 +106,7 @@
         app:layout_constraintStart_toStartOf="@+id/tvDev1"
         app:layout_constraintEnd_toEndOf="@+id/tvDev1" />
     <TextView
-            android:text="JOÃO VICTOR DE SOUZA SANTOS \n RM331581"
+            android:text="@string/txt_dev_joao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_padrao"

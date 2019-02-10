@@ -62,4 +62,11 @@
     <string name="message_success_data_update">Dados cadastrais atualizados!</string>
     <string name="message_error_data_not_updated">Erro ao atualizar dados cadastrais!</string>
     <string name="message_sccuess_event_deleted">Evento excluído com sucesso!</string>
+    <string name="text_development_by">Produto desenvolvido por App Teraphy Ltda</string>
+    <string name="text_developers">Desenvolvedores</string>
+    <string name="txt_dev_joao">JOÃO VICTOR DE SOUZA SANTOS RM331581</string>
+    <string name="txt_dev_danillo">DANILLO RAMOS DE CARVALHO BEZERRA RM331866</string>
+    <string name="txt_dev_carlos">CARLOS ROBERTO DE CARVALHO JUNIOR RM330658</string>
+    <string name="number_version">"Versão número: "</string>
+    <string name="message_error_for_edit_event">Somente o responsável do evento pode editar o registro!</string>
 </resources>

@@ -66,4 +66,11 @@
     <string name="message_success_data_update">Data updated!</string>
     <string name="message_error_data_not_updated">Error updating data!</string>
     <string name="message_sccuess_event_deleted">Event deleted successfully!</string>
+    <string name="number_version">Version number:</string>
+    <string name="text_development_by">A product development by App Teraphy Ltda</string>
+    <string name="text_developers">Developers</string>
+    <string name="txt_dev_joao">JOÃO VICTOR DE SOUZA SANTOS RM331581</string>
+    <string name="txt_dev_danillo">DANILLO RAMOS DE CARVALHO BEZERRA RM331866</string>
+    <string name="txt_dev_carlos">CARLOS ROBERTO DE CARVALHO JUNIOR RM330658</string>
+    <string name="message_error_for_edit_event">Event can be edit by owners only!</string>
 </resources>
